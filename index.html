@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OXA_GAMING | Dead by Daylight</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron',sans-serif;
+}
+
+body{
+    background:
+    linear-gradient(rgba(0,0,0,0.75),
+    rgba(0,0,0,0.85)),
+    url("dbd.jpg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color:white;
+    overflow-x:hidden;
+}
+
+#particles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,0.3);
+    z-index:999;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:900;
+    color:#00ffff;
+    text-shadow:0 0 20px cyan;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00ffff;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:5rem;
+    color:#00ffff;
+    text-shadow:
+    0 0 20px cyan,
+    0 0 40px cyan,
+    0 0 80px cyan;
+}
+
+.hero h2{
+    margin-top:15px;
+    color:#ff3131;
+}
+
+.hero p{
+    margin-top:20px;
+    max-width:700px;
+    color:#d0d0d0;
+    line-height:1.8;
+}
+
+.btns{
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    margin:10px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.primary{
+    background:#00ffff;
+    color:black;
+}
+
+.secondary{
+    border:2px solid #00ffff;
+    color:#00ffff;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 30px cyan;
+}
+
+.section{
+    padding:100px 10%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+    color:#00ffff;
+    font-size:2.5rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(0,255,255,0.2);
+    padding:30px;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px cyan;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#00ffff;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stat{
+    text-align:center;
+    background:#0b0b0b;
+    padding:30px;
+    border-radius:20px;
+}
+
+.stat h1{
+    color:#00ffff;
+    font-size:3rem;
+}
+
+.about{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    line-height:2;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+.glow{
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 20px cyan;
+    }
+    to{
+        text-shadow:0 0 60px cyan;
+    }
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3rem;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<header>
+    <div class="logo">OXA_GAMING</div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#content">Content</a>
+        <a href="#stats">Stats</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <h1 class="glow">OXA_GAMING</h1>
+
+    <h2>DEAD BY DAYLIGHT SURVIVOR MAIN</h2>
+
+    <p>
+        Welcome to OXA_GAMING.
+        Home of epic chases, funny moments,
+        killer mind games, clutch escapes,
+        and unforgettable Dead by Daylight gameplay.
+    </p>
+
+    <div class="btns">
+        <a href="https://www.youtube.com/@OZGamers03"
+   target="_blank"
+   class="btn primary">
+    SUBSCRIBE
+</a>
+
+        <a href="#content" class="btn secondary">
+            WATCH CONTENT
+        </a>
+    </div>
+
+</section>
+
+<section id="stats" class="section">
+
+<h2 class="title">CHANNEL STATS</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h1>100+</h1>
+<p>Videos</p>
+</div>
+
+<div class="stat">
+<h1>DBD</h1>
+<p>Main Content</p>
+</div>
+
+<div class="stat">
+<h1>24/7</h1>
+<p>Gaming Passion</p>
+</div>
+
+<div class="stat">
+<h1>∞</h1>
+<p>Funny Moments</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="content" class="section">
+
+<h2 class="title">POPULAR CONTENT</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>💀 Killer Rage Quit</h3>
+<p>The killer chased me for so long that he finally gave up.</p>
+</div>
+
+<div class="card">
+<h3>🏃 Infinite Chase</h3>
+<p>Mind games, loops, and insane survivor gameplay.</p>
+</div>
+
+<div class="card">
+<h3>😂 Funny DBD Moments</h3>
+<p>The funniest moments from my Dead by Daylight matches.</p>
+</div>
+
+<div class="card">
+<h3>🔥 Clutch Escapes</h3>
+<p>Escaping at the last second when all hope is lost.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="section">
+
+<h2 class="title">ABOUT OXA_GAMING</h2>
+
+<div class="about">
+
+OXA_GAMING is a gaming channel focused on
+Dead by Daylight content. Expect intense survivor gameplay,
+epic chases, funny moments, killer confusion,
+and entertaining gaming experiences uploaded regularly.
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 OXA_GAMING • ALL RIGHTS RESERVED
+
+</footer>
+
+<script>
+
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+
+for(let i=0;i<120;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*2,
+dx:(Math.random()-0.5),
+dy:(Math.random()-0.5)
+});
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach(p=>{
+
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle="cyan";
+ctx.fill();
+
+p.x+=p.dx;
+p.y+=p.dy;
+
+if(p.x<0||p.x>canvas.width)p.dx*=-1;
+if(p.y<0||p.y>canvas.height)p.dy*=-1;
+
+});
+
+requestAnimationFrame(animate);
+
+}
+
+animate();
+
+window.addEventListener("resize",()=>{
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+});
+
+</script>
+
+</body>
+</html>
